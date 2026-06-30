@@ -17,21 +17,25 @@ The pipeline follows a highly modular, seven-stage sequential architecture. Each
 ## Canonical Schema & Normalization
 The internal canonical record separates identity, contact, and professional-history cleanly: `(candidate_id, full_name, emails[], phones[], location, links, headline, years_experience, skills[], experience[], education[], provenance[], overall_confidence)`.
 * **Phones**: Normalized strictly to `E.164`. As this pipeline is tailored for Indian candidate datasets, ambiguous 10-digit phone numbers default to the `+91` country code.
-* **Skills**: Normalized via a canonical alias dictionary (e.g. "ML" → "Machine Learning") to collapse variants across resumes and ATS systems.
+* **Location**: Standardized into a strictly-typed `{city, region, country}` object, where `country` explicitly enforces ISO-3166 alpha-2 abbreviations (e.g. `IN` for India) rather than full strings.
+* **Dates**: Normalized universally to the `YYYY-MM` format.
+* **Skills Schema**: Normalized via a canonical alias dictionary (e.g. "ML" → "Machine Learning"). Beyond renaming, the schema for skills is highly structured: `[{name, confidence, sources[]}]`. Rather than treating skills as a flat array of strings, each individual skill object actively tracks all source file paths that corroborated it, which directly drives its isolated confidence score.
 * **Links**: Extracted rigorously even from unstructured text (e.g. portfolio URLs lacking `https://` prefixes are safely caught and rebuilt).
 
 ## Merge & Confidence Policy
 **Match Key**: Normalized `full_name`.
 **Conflict Rule**: When sources disagree, structured data (e.g. ATS JSON or CSV) wins over values inferred from unstructured prose. Regardless of the winner, **both** values are retained in the `provenance` array with their selection method marked, ensuring human reviewers can audit the decision.
 
-**Confidence Formula (per field):**
+**Confidence Formula (per field & per individual skill):**
 * Single structured source → 0.70
 * Single unstructured source (regex) → 0.50
-* Two sources, values agree → 0.95
-* Two sources, values disagree → 0.40 (provenance retains the trail)
+* Two sources corroborating the exact value (or the exact skill) → 0.95
+* Conflicting sources (for scalar fields) → 0.40 (provenance retains the trail)
 * Missing from all sources → field is `null`, excluded from average
 
-`overall_confidence` is the mean of all non-null field scores. This explicitly rewards cross-source agreement while penalizing extraction uncertainty, fulfilling the principle that "wrong-but-confident is worse than honestly-empty."
+For arrays like `skills`, every single skill computes its own confidence based on the number of `sources[]` that detected it. The pipeline then averages those individual skill confidences to produce a single `skills_confidence` metric. 
+
+Finally, the `overall_confidence` is the mean of all populated field scores. This explicitly rewards cross-source agreement while penalizing extraction uncertainty, fulfilling the principle that "wrong-but-confident is worse than honestly-empty."
 
 ## Runtime Config / Projection Layer
 The canonical record and output schema are strictly separated: `project(record, config) -> output`.

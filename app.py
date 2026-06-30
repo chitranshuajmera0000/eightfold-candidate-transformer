@@ -62,6 +62,13 @@ def process_data():
         if has_notes:
             cmd_args.extend(['--notes', notes_dir])
             
+        # Handle Config JSON
+        if 'config_file' in request.files and request.files['config_file'].filename:
+            f = request.files['config_file']
+            path = os.path.join(temp_dir, secure_filename(f.filename))
+            f.save(path)
+            cmd_args.extend(['--config', path])
+            
         # Output file
         out_path = os.path.join(temp_dir, 'output.json')
         cmd_args.extend(['--out', out_path])

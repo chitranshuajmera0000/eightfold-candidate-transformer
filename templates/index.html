@@ -95,6 +95,8 @@
             font-size: 12px;
             cursor: pointer;
             display: none;
+            position: relative;
+            z-index: 10;
             align-items: center;
             justify-content: center;
             line-height: 1;
@@ -222,6 +224,13 @@
                     <input type="file" name="notes_files" accept=".txt" multiple id="notes_input" onchange="updateFileName(this, true)">
                     <div class="file-name"><span class="text"></span><button type="button" class="clear-btn" onclick="clearFile('notes_input')">✕</button></div>
                 </div>
+                <div class="file-input-wrapper" style="border-color: var(--primary-color);">
+                    <label>Runtime Config</label>
+                    <div style="font-size: 24px; margin-bottom:10px;">⚙️</div>
+                    <span style="font-size:0.8rem; color:var(--text-muted)">config.json (Optional)</span>
+                    <input type="file" name="config_file" accept=".json" id="config_input" onchange="updateFileName(this)">
+                    <div class="file-name"><span class="text"></span><button type="button" class="clear-btn" onclick="clearFile('config_input')">✕</button></div>
+                </div>
             </div>
             <button type="submit" id="submitBtn" class="btn">Run ETL Pipeline ✨</button>
         </form>
@@ -337,7 +346,14 @@
             container.innerHTML = '';
             
             candidates.forEach(c => {
-                const skills = c.skills.map(s => `<span class="tag">${s.name}</span>`).join('');
+                const uid = c.candidate_id || Math.random().toString(36).substr(2, 9);
+                let skills = '';
+                if (Array.isArray(c.skills)) {
+                    skills = c.skills.map(s => {
+                        const name = typeof s === 'string' ? s : (s.name || '');
+                        return name ? `<span class="tag">${name}</span>` : '';
+                    }).join('');
+                }
                 
                 let linksHtml = '';
                 if (c.links) {
@@ -347,7 +363,7 @@
                 }
                 
                 let exp = '';
-                if (c.experience.length > 0) {
+                if (Array.isArray(c.experience) && c.experience.length > 0) {
                     const title = c.experience[0].title;
                     const company = c.experience[0].company;
                     if (title && title.toLowerCase() !== 'unknown') {
@@ -365,8 +381,32 @@
                     exp = 'No experience listed';
                 }
 
-                const phoneStr = c.phones && c.phones.length > 0 ? c.phones[0] : 'N/A';
-                const locStr = c.location && c.location.city ? c.location.city : 'N/A';
+                const phoneStr = (c.phones && c.phones.length > 0) ? c.phones[0] : (c.phone || 'N/A');
+                const emailStr = (c.emails && c.emails.length > 0) ? c.emails[0] : (c.primary_email || 'N/A');
+                
+                let locStr = 'N/A';
+                if (c.location) {
+                    const countryNames = {
+                        "IN": "India",
+                        "US": "United States",
+                        "UK": "United Kingdom",
+                        "CA": "Canada",
+                        "AU": "Australia"
+                    };
+                    const parts = [];
+                    if (c.location.city) parts.push(c.location.city);
+                    
+                    if (c.location.country) {
+                        const code = c.location.country.toUpperCase();
+                        parts.push(countryNames[code] || c.location.country);
+                    }
+                    
+                    if (parts.length > 0) locStr = parts.join(', ');
+                }
+
+                const confStr = (c.overall_confidence !== undefined && c.overall_confidence !== null) 
+                    ? `${(c.overall_confidence * 100).toFixed(0)}% Match Confidence` 
+                    : (c.skills_confidence ? 'Custom Schema' : 'No Confidence Metric');
 
                 const html = `
                     <div class="card candidate-card">
@@ -376,22 +416,22 @@
                                 <p style="margin:0 0 16px 0; color:var(--text-muted)">${c.headline || exp}</p>
                             </div>
                             <div class="confidence">
-                                ${(c.overall_confidence * 100).toFixed(0)}% Match Confidence
+                                ${confStr}
                             </div>
                         </div>
                         <div style="margin-bottom: 16px;">
                             ${skills}
                         </div>
                         <div style="font-size: 0.9rem;">
-                            <strong>Email:</strong> ${c.emails.length > 0 ? c.emails[0] : 'N/A'} | 
+                            <strong>Email:</strong> ${emailStr} | 
                             <strong>Phone:</strong> ${phoneStr} | 
                             <strong>Location:</strong> ${locStr}
                         </div>
                         <div class="flex-between" style="margin-top: 12px; font-size:0.9rem; align-items: center;">
                             <div>${linksHtml}</div>
-                            <button type="button" onclick="toggleCandidateJson('${c.candidate_id}')" style="background:none; border:none; color:var(--primary-color); cursor:pointer; font-size:0.8rem; font-weight:600;">{ } View JSON</button>
+                            <button type="button" onclick="toggleCandidateJson('${uid}')" style="background:none; border:none; color:var(--primary-color); cursor:pointer; font-size:0.8rem; font-weight:600;">{ } View JSON</button>
                         </div>
-                        <pre id="json-${c.candidate_id}" style="display:none; font-size:0.75rem; margin-top:16px; overflow-x:auto;">${JSON.stringify(c, null, 2)}</pre>
+                        <pre id="json-${uid}" style="display:none; font-size:0.75rem; margin-top:16px; overflow-x:auto;">${JSON.stringify(c, null, 2)}</pre>
                     </div>
                 `;
                 container.innerHTML += html;
