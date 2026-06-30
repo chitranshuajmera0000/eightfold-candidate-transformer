@@ -13,6 +13,11 @@ This pipeline far exceeds the minimum assignment requirements by fully integrati
 * Python 3.9+
 * No external heavy dependencies. The backend relies solely on the standard library.
 
+## Key Deliverables
+* **[Technical Design Document (PDF)](docs/Chitranshu_Ajmera_ajmerachitranshu951@gmail.com_Eightfold.pdf)**: The 1-page architecture design, schema mappings, and confidence formula explanation.
+* **[Final JSON Output](final_output.json)**: The actual canonical JSON output successfully produced by running the pipeline on all 5 provided sample sources.
+* **[Unit Tests & Edge Cases](test_pipeline.py)**: The automated test suite validating the 5 designed edge cases (including a "Gold Profile" end-to-end trace).
+
 ### 2. Running the CLI
 You can run the pipeline from the command line by pointing it to the respective input files/directories.
 ```bash

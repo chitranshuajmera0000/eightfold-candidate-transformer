@@ -1,0 +1,577 @@
+[
+  {
+    "candidate_id": "222ab2cc07",
+    "full_name": "Chitranshu Ajmera",
+    "emails": [
+      "chitranshu@example.in"
+    ],
+    "phones": [
+      "+919876543210"
+    ],
+    "location": {
+      "city": "Bengaluru",
+      "region": null,
+      "country": "IN"
+    },
+    "links": {
+      "linkedin": "https://linkedin.com/in/chitranshu-ajmera-b72878297/",
+      "github": "https://github.com/chitranshuajmera0000/",
+      "portfolio": "https://chitranshu-portfolio.vercel.app",
+      "other": []
+    },
+    "headline": "Backend engineer, ML enthusiast",
+    "years_experience": 4,
+    "skills": [
+      {
+        "name": "Machine Learning",
+        "confidence": 0.97,
+        "sources": [
+          "sample_data/notes/chitranshu_note.txt",
+          "sample_data/ats_export.json",
+          "sample_data/linkedin_export.json"
+        ]
+      },
+      {
+        "name": "Python",
+        "confidence": 0.97,
+        "sources": [
+          "sample_data/notes/chitranshu_note.txt",
+          "sample_data/ats_export.json",
+          "sample_data/linkedin_export.json"
+        ]
+      },
+      {
+        "name": "JavaScript",
+        "confidence": 0.7,
+        "sources": [
+          "sample_data/ats_export.json"
+        ]
+      },
+      {
+        "name": "SQL",
+        "confidence": 0.5,
+        "sources": [
+          "sample_data/linkedin_export.json"
+        ]
+      }
+    ],
+    "experience": [
+      {
+        "company": "Infosys",
+        "title": "Software Engineer",
+        "start": "2020-01",
+        "end": null,
+        "summary": null
+      }
+    ],
+    "education": [],
+    "provenance": [
+      {
+        "field": "full_name",
+        "source": "sample_data/recruiters.csv & sample_data/notes/chitranshu_note.txt & sample_data/ats_export.json & sample_data/linkedin_export.json & sample_data/github_export.json",
+        "method": "agreed"
+      },
+      {
+        "field": "emails",
+        "source": "sample_data/recruiters.csv & sample_data/ats_export.json & sample_data/linkedin_export.json & sample_data/github_export.json",
+        "method": "csv_wins"
+      },
+      {
+        "field": "phones",
+        "source": "sample_data/recruiters.csv & sample_data/notes/chitranshu_note.txt & sample_data/ats_export.json & sample_data/linkedin_export.json",
+        "method": "agreed"
+      },
+      {
+        "field": "years_experience",
+        "source": "sample_data/notes/chitranshu_note.txt",
+        "method": "regex_extraction"
+      },
+      {
+        "field": "headline",
+        "source": "sample_data/ats_export.json & sample_data/linkedin_export.json & sample_data/github_export.json",
+        "method": "agreed"
+      },
+      {
+        "field": "location",
+        "source": "sample_data/recruiters.csv",
+        "method": "agreed"
+      },
+      {
+        "field": "links",
+        "source": "sample_data/recruiters.csv & sample_data/ats_export.json & sample_data/github_export.json",
+        "method": "mixed"
+      },
+      {
+        "field": "skills",
+        "source": "sample_data/notes/chitranshu_note.txt & sample_data/ats_export.json & sample_data/linkedin_export.json",
+        "method": "combined_extraction"
+      },
+      {
+        "field": "experience",
+        "source": "sample_data/recruiters.csv",
+        "method": "csv_column"
+      }
+    ],
+    "overall_confidence": 0.713
+  },
+  {
+    "candidate_id": "1d36d5c2b6",
+    "full_name": "Anurag Vivek",
+    "emails": [
+      "anurag@example.in"
+    ],
+    "phones": [
+      "+919988776655"
+    ],
+    "location": {
+      "city": "Mumbai",
+      "region": null,
+      "country": "IN"
+    },
+    "links": {
+      "linkedin": "https://linkedin.com/in/anurag-vivek-584a4a341",
+      "github": "https://github.com/ANURAGVIVEK0919",
+      "portfolio": null,
+      "other": []
+    },
+    "headline": null,
+    "years_experience": 6,
+    "skills": [],
+    "experience": [
+      {
+        "company": "Wipro",
+        "title": "Product Manager",
+        "start": "2018-05",
+        "end": "2022-08",
+        "summary": null
+      }
+    ],
+    "education": [],
+    "provenance": [
+      {
+        "field": "full_name",
+        "source": "sample_data/recruiters.csv & sample_data/notes/anurag_note.txt & sample_data/github_export.json",
+        "method": "agreed"
+      },
+      {
+        "field": "emails",
+        "source": "sample_data/recruiters.csv",
+        "method": "csv_column"
+      },
+      {
+        "field": "phones",
+        "source": "sample_data/recruiters.csv & sample_data/notes/anurag_note.txt",
+        "method": "agreed"
+      },
+      {
+        "field": "years_experience",
+        "source": "sample_data/notes/anurag_note.txt",
+        "method": "regex_extraction"
+      },
+      {
+        "field": "location",
+        "source": "sample_data/recruiters.csv",
+        "method": "agreed"
+      },
+      {
+        "field": "links",
+        "source": "sample_data/recruiters.csv & sample_data/github_export.json",
+        "method": "mixed"
+      },
+      {
+        "field": "experience",
+        "source": "sample_data/recruiters.csv",
+        "method": "csv_column"
+      }
+    ],
+    "overall_confidence": 0.755
+  },
+  {
+    "candidate_id": "d5e737eb0e",
+    "full_name": "Bhavini Ajmera",
+    "emails": [
+      "bhavini@example.in"
+    ],
+    "phones": [],
+    "location": {
+      "city": "Hyderabad",
+      "region": null,
+      "country": "IN"
+    },
+    "links": {
+      "linkedin": "https://linkedin.com/in/bhavini-ajmera-9a7367282/",
+      "github": null,
+      "portfolio": null,
+      "other": []
+    },
+    "headline": null,
+    "years_experience": null,
+    "skills": [
+      {
+        "name": "Python",
+        "confidence": 0.95,
+        "sources": [
+          "sample_data/notes/bhavini_note.txt",
+          "sample_data/linkedin_export.json"
+        ]
+      },
+      {
+        "name": "AWS",
+        "confidence": 0.95,
+        "sources": [
+          "sample_data/notes/bhavini_note.txt",
+          "sample_data/linkedin_export.json"
+        ]
+      },
+      {
+        "name": "Machine Learning",
+        "confidence": 0.5,
+        "sources": [
+          "sample_data/linkedin_export.json"
+        ]
+      }
+    ],
+    "experience": [
+      {
+        "company": "TCS",
+        "title": "Data Scientist",
+        "start": "2021-06",
+        "end": null,
+        "summary": null
+      }
+    ],
+    "education": [],
+    "provenance": [
+      {
+        "field": "full_name",
+        "source": "sample_data/recruiters.csv & sample_data/notes/bhavini_note.txt & sample_data/linkedin_export.json",
+        "method": "agreed"
+      },
+      {
+        "field": "emails",
+        "source": "sample_data/recruiters.csv",
+        "method": "csv_column"
+      },
+      {
+        "field": "location",
+        "source": "sample_data/recruiters.csv",
+        "method": "agreed"
+      },
+      {
+        "field": "links",
+        "source": "sample_data/recruiters.csv",
+        "method": "agreed"
+      },
+      {
+        "field": "skills",
+        "source": "sample_data/notes/bhavini_note.txt & sample_data/linkedin_export.json",
+        "method": "combined_extraction"
+      },
+      {
+        "field": "experience",
+        "source": "sample_data/recruiters.csv",
+        "method": "csv_column"
+      }
+    ],
+    "overall_confidence": 0.855
+  },
+  {
+    "candidate_id": "36bde1d37d",
+    "full_name": "Money Utkarsh",
+    "emails": [
+      "money.u@test.in"
+    ],
+    "phones": [
+      "+918899001122"
+    ],
+    "location": {
+      "city": "Noida",
+      "region": null,
+      "country": "IN"
+    },
+    "links": {
+      "linkedin": "https://linkedin.com/in/moneyutkarsh/",
+      "github": null,
+      "portfolio": null,
+      "other": []
+    },
+    "headline": null,
+    "years_experience": null,
+    "skills": [
+      {
+        "name": "JavaScript",
+        "confidence": 0.5,
+        "sources": [
+          "sample_data/notes/money_utkarsh_note.txt"
+        ]
+      },
+      {
+        "name": "Node.js",
+        "confidence": 0.97,
+        "sources": [
+          "sample_data/notes/money_utkarsh_note.txt",
+          "sample_data/ats_export.json",
+          "sample_data/linkedin_export.json"
+        ]
+      },
+      {
+        "name": "SQL",
+        "confidence": 0.95,
+        "sources": [
+          "sample_data/notes/money_utkarsh_note.txt",
+          "sample_data/ats_export.json"
+        ]
+      },
+      {
+        "name": "AWS",
+        "confidence": 0.7,
+        "sources": [
+          "sample_data/ats_export.json"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "confidence": 0.5,
+        "sources": [
+          "sample_data/linkedin_export.json"
+        ]
+      }
+    ],
+    "experience": [
+      {
+        "company": "Cognizant",
+        "title": "Backend Developer",
+        "start": "2019-03",
+        "end": null,
+        "summary": null
+      }
+    ],
+    "education": [],
+    "provenance": [
+      {
+        "field": "full_name",
+        "source": "sample_data/recruiters.csv & sample_data/notes/money_utkarsh_note.txt & sample_data/ats_export.json & sample_data/linkedin_export.json",
+        "method": "agreed"
+      },
+      {
+        "field": "emails",
+        "source": "sample_data/recruiters.csv & sample_data/ats_export.json",
+        "method": "agreed"
+      },
+      {
+        "field": "phones",
+        "source": "sample_data/recruiters.csv & sample_data/ats_export.json",
+        "method": "agreed"
+      },
+      {
+        "field": "location",
+        "source": "sample_data/recruiters.csv",
+        "method": "agreed"
+      },
+      {
+        "field": "links",
+        "source": "sample_data/recruiters.csv",
+        "method": "agreed"
+      },
+      {
+        "field": "skills",
+        "source": "sample_data/notes/money_utkarsh_note.txt & sample_data/ats_export.json & sample_data/linkedin_export.json",
+        "method": "combined_extraction"
+      },
+      {
+        "field": "experience",
+        "source": "sample_data/recruiters.csv",
+        "method": "csv_column"
+      }
+    ],
+    "overall_confidence": 0.9168
+  },
+  {
+    "candidate_id": "5f435c4f8b",
+    "full_name": "Sowmya BJ",
+    "emails": [
+      "sowmya.bj@test.in"
+    ],
+    "phones": [
+      "+917766554433"
+    ],
+    "location": {
+      "city": "Bengaluru",
+      "region": null,
+      "country": "IN"
+    },
+    "links": {
+      "linkedin": "https://linkedin.com/in/sowmya-bj-417b45151/",
+      "github": null,
+      "portfolio": null,
+      "other": []
+    },
+    "headline": null,
+    "years_experience": 2,
+    "skills": [
+      {
+        "name": "JavaScript",
+        "confidence": 0.97,
+        "sources": [
+          "sample_data/notes/sowmya_note.txt",
+          "sample_data/ats_export.json",
+          "sample_data/linkedin_export.json"
+        ]
+      },
+      {
+        "name": "React",
+        "confidence": 0.97,
+        "sources": [
+          "sample_data/notes/sowmya_note.txt",
+          "sample_data/ats_export.json",
+          "sample_data/linkedin_export.json"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "confidence": 0.7,
+        "sources": [
+          "sample_data/ats_export.json"
+        ]
+      }
+    ],
+    "experience": [
+      {
+        "company": "Accenture",
+        "title": "Frontend Engineer",
+        "start": "2022-01",
+        "end": null,
+        "summary": null
+      }
+    ],
+    "education": [],
+    "provenance": [
+      {
+        "field": "full_name",
+        "source": "sample_data/recruiters.csv & sample_data/notes/sowmya_note.txt & sample_data/ats_export.json & sample_data/linkedin_export.json",
+        "method": "agreed"
+      },
+      {
+        "field": "emails",
+        "source": "sample_data/recruiters.csv & sample_data/ats_export.json",
+        "method": "agreed"
+      },
+      {
+        "field": "phones",
+        "source": "sample_data/recruiters.csv",
+        "method": "csv_column"
+      },
+      {
+        "field": "years_experience",
+        "source": "sample_data/notes/sowmya_note.txt",
+        "method": "regex_extraction"
+      },
+      {
+        "field": "location",
+        "source": "sample_data/recruiters.csv",
+        "method": "agreed"
+      },
+      {
+        "field": "links",
+        "source": "sample_data/recruiters.csv",
+        "method": "agreed"
+      },
+      {
+        "field": "skills",
+        "source": "sample_data/notes/sowmya_note.txt & sample_data/ats_export.json & sample_data/linkedin_export.json",
+        "method": "combined_extraction"
+      },
+      {
+        "field": "experience",
+        "source": "sample_data/recruiters.csv",
+        "method": "csv_column"
+      }
+    ],
+    "overall_confidence": 0.784
+  },
+  {
+    "candidate_id": "4e01789266",
+    "full_name": "Rahul Blute",
+    "emails": [
+      "rahul.blute@test.in"
+    ],
+    "phones": [
+      "+919988112233"
+    ],
+    "location": {
+      "city": "Chennai",
+      "region": null,
+      "country": "IN"
+    },
+    "links": {
+      "linkedin": null,
+      "github": "https://github.com/Blute122",
+      "portfolio": null,
+      "other": []
+    },
+    "headline": null,
+    "years_experience": 8,
+    "skills": [
+      {
+        "name": "DevOps",
+        "confidence": 0.5,
+        "sources": [
+          "sample_data/notes/rahul_blute_note.txt"
+        ]
+      }
+    ],
+    "experience": [
+      {
+        "company": "Amazon",
+        "title": "SDE II",
+        "start": "2017-09",
+        "end": null,
+        "summary": null
+      }
+    ],
+    "education": [],
+    "provenance": [
+      {
+        "field": "full_name",
+        "source": "sample_data/recruiters.csv & sample_data/notes/rahul_blute_note.txt & sample_data/github_export.json",
+        "method": "agreed"
+      },
+      {
+        "field": "emails",
+        "source": "sample_data/recruiters.csv",
+        "method": "csv_column"
+      },
+      {
+        "field": "phones",
+        "source": "sample_data/recruiters.csv",
+        "method": "csv_column"
+      },
+      {
+        "field": "years_experience",
+        "source": "sample_data/notes/rahul_blute_note.txt",
+        "method": "regex_extraction"
+      },
+      {
+        "field": "location",
+        "source": "sample_data/recruiters.csv",
+        "method": "agreed"
+      },
+      {
+        "field": "links",
+        "source": "sample_data/github_export.json",
+        "method": "agreed"
+      },
+      {
+        "field": "skills",
+        "source": "sample_data/notes/rahul_blute_note.txt",
+        "method": "regex_extraction"
+      },
+      {
+        "field": "experience",
+        "source": "sample_data/recruiters.csv",
+        "method": "csv_column"
+      }
+    ],
+    "overall_confidence": 0.654
+  }
+]
