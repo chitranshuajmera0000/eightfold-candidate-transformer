@@ -19,7 +19,12 @@ This pipeline far exceeds the minimum assignment requirements by fully integrati
 * **[Unit Tests & Edge Cases](test_pipeline.py)**: The automated test suite validating the 5 designed edge cases (including a "Gold Profile" end-to-end trace).
 
 ### 2. Running the CLI
-You can run the pipeline from the command line by pointing it to the respective input files/directories.
+For Windows users, simply double-click or run the included batch script to execute the pipeline with all sample data instantly:
+```cmd
+run.bat
+```
+
+*(Alternatively, you can run the full python command manually):*
 ```bash
 python main.py \
     --csv sample_data/recruiters.csv \
