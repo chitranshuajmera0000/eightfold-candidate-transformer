@@ -1,0 +1,93 @@
+[
+  {
+    "full_name": "Chitranshu Ajmera",
+    "full_name_confidence": 0.99,
+    "primary_email": "chitranshu@example.in",
+    "primary_email_confidence": 0.4,
+    "phone": "+919876543210",
+    "phone_confidence": 0.99,
+    "skills": [
+      "Machine Learning",
+      "Python",
+      "JavaScript",
+      "SQL"
+    ],
+    "skills_confidence": 0.7849999999999999,
+    "years_experience": 4,
+    "overall_confidence": 0.713
+  },
+  {
+    "full_name": "Anurag Vivek",
+    "full_name_confidence": 0.97,
+    "primary_email": "anurag@example.in",
+    "primary_email_confidence": 0.7,
+    "phone": "+919988776655",
+    "phone_confidence": 0.95,
+    "skills": [],
+    "years_experience": 6,
+    "overall_confidence": 0.755
+  },
+  {
+    "full_name": "Bhavini Ajmera",
+    "full_name_confidence": 0.97,
+    "primary_email": "bhavini@example.in",
+    "primary_email_confidence": 0.7,
+    "phone": null,
+    "skills": [
+      "Python",
+      "AWS",
+      "Machine Learning"
+    ],
+    "skills_confidence": 0.7999999999999999,
+    "years_experience": null,
+    "overall_confidence": 0.855
+  },
+  {
+    "full_name": "Money Utkarsh",
+    "full_name_confidence": 0.99,
+    "primary_email": "money.u@test.in",
+    "primary_email_confidence": 0.95,
+    "phone": "+918899001122",
+    "phone_confidence": 0.95,
+    "skills": [
+      "JavaScript",
+      "Node.js",
+      "SQL",
+      "AWS",
+      "TypeScript"
+    ],
+    "skills_confidence": 0.724,
+    "years_experience": null,
+    "overall_confidence": 0.9168
+  },
+  {
+    "full_name": "Sowmya BJ",
+    "full_name_confidence": 0.99,
+    "primary_email": "sowmya.bj@test.in",
+    "primary_email_confidence": 0.95,
+    "phone": "+917766554433",
+    "phone_confidence": 0.7,
+    "skills": [
+      "JavaScript",
+      "React",
+      "TypeScript"
+    ],
+    "skills_confidence": 0.8799999999999999,
+    "years_experience": 2,
+    "overall_confidence": 0.784
+  },
+  {
+    "full_name": "Rahul Blute",
+    "full_name_confidence": 0.97,
+    "primary_email": "rahul.blute@test.in",
+    "primary_email_confidence": 0.7,
+    "phone": "+919988112233",
+    "phone_confidence": 0.7,
+    "skills": [
+      "DevOps"
+    ],
+    "skills_confidence": 0.5,
+    "years_experience": 8,
+    "overall_confidence": 0.654
+  }
+]

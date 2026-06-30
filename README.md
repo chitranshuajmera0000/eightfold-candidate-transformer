@@ -15,7 +15,8 @@ This pipeline far exceeds the minimum assignment requirements by fully integrati
 
 ## Key Deliverables
 * **[Technical Design Document (PDF)](docs/Chitranshu_Ajmera_ajmerachitranshu951@gmail.com_Eightfold.pdf)**: The 1-page architecture design, schema mappings, and confidence formula explanation.
-* **[Final JSON Output](final_output.json)**: The actual canonical JSON output successfully produced by running the pipeline on all 5 provided sample sources.
+* **[Final JSON Output (Default)](final_output.json)**: The actual canonical JSON output successfully produced by running the pipeline on all 5 provided sample sources.
+* **[Custom JSON Output (Configured)](custom_output.json)**: The reshaped JSON output produced by passing the `sample_config.json` to the engine, demonstrating the dynamic projection layer.
 * **[Unit Tests & Edge Cases](test_pipeline.py)**: The automated test suite validating the 5 designed edge cases (including a "Gold Profile" end-to-end trace).
 
 ### 2. Running the CLI
