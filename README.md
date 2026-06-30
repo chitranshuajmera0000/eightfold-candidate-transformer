@@ -14,6 +14,7 @@ This pipeline far exceeds the minimum assignment requirements by fully integrati
 * No external heavy dependencies. The backend relies solely on the standard library.
 
 ## Key Deliverables
+* **[Demo Video 🎥](https://drive.google.com/file/d/1inY_-iKspM0M7oWw1poYeVDoGurijVOF/view?usp=sharing)**: A quick walk-through of the pipeline, showcasing the Web UI and the dynamic JSON output reshaping.
 * **[Technical Design Document (PDF)](docs/Chitranshu_Ajmera_ajmerachitranshu951@gmail.com_Eightfold.pdf)**: The 1-page architecture design, schema mappings, and confidence formula explanation.
 * **[Final JSON Output (Default)](final_output.json)**: The actual canonical JSON output successfully produced by running the pipeline on all 5 provided sample sources.
 * **[Custom JSON Output (Configured)](custom_output.json)**: The reshaped JSON output produced by passing the `sample_config.json` to the engine, demonstrating the dynamic projection layer.
