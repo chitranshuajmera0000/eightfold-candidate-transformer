@@ -1,0 +1,59 @@
+[
+  {
+    "firstName": "Chitranshu",
+    "lastName": "Ajmera",
+    "emailAddress": "chitranshu@example.in",
+    "phoneNumbers": ["+91 98765 43210"],
+    "positions": [
+      {
+        "companyName": "Infosys",
+        "title": "Software Engineer",
+        "startDate": {"month": 1, "year": 2020}
+      }
+    ],
+    "skills": ["Machine Learning", "Python", "SQL"],
+    "headline": "Backend engineer, ML enthusiast",
+    "locationName": "Bengaluru, Karnataka, India",
+    "profileUrl": "https://www.linkedin.com/in/chitranshu-ajmera-b72878297/"
+  },
+  {
+    "firstName": "Bhavini",
+    "lastName": "Ajmera",
+    "positions": [
+      {
+        "companyName": "TCS",
+        "title": "Data Scientist",
+        "startDate": {"month": 6, "year": 2021}
+      }
+    ],
+    "skills": ["Python", "Machine Learning", "AWS"],
+    "locationName": "Hyderabad, Telangana, India",
+    "profileUrl": "https://www.linkedin.com/in/bhavini-ajmera-9a7367282/"
+  },
+  {
+    "firstName": "Money",
+    "lastName": "Utkarsh",
+    "positions": [
+      {
+        "companyName": "Cognizant",
+        "title": "Backend Developer"
+      }
+    ],
+    "skills": ["Node.js", "TypeScript"],
+    "locationName": "Noida, Uttar Pradesh, India",
+    "profileUrl": "https://www.linkedin.com/in/moneyutkarsh/"
+  },
+  {
+    "firstName": "Sowmya",
+    "lastName": "BJ",
+    "positions": [
+      {
+        "companyName": "Accenture",
+        "title": "Frontend Engineer"
+      }
+    ],
+    "skills": ["React", "JavaScript"],
+    "locationName": "Bengaluru, Karnataka, India",
+    "profileUrl": "https://www.linkedin.com/in/sowmya-bj-417b45151/"
+  }
+]

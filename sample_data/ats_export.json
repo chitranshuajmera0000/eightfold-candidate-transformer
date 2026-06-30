@@ -1,0 +1,36 @@
+[
+  {
+    "full_name": "Chitranshu Ajmera",
+    "contact_email": "chitranshu.ajmera@work.in",
+    "contact_phone": "9876543210",
+    "employer": "Infosys",
+    "job_title": "Senior Software Engineer",
+    "expertise": ["Python", "Machine Learning", "JavaScript"],
+    "start_date": "2020-01",
+    "city": "Bengaluru",
+    "country_code": "IN",
+    "linkedin_url": "https://www.linkedin.com/in/chitranshu-ajmera-b72878297/",
+    "github_url": "https://github.com/chitranshuajmera0000/",
+    "profile_headline": "Backend engineer, ML enthusiast"
+  },
+  {
+    "full_name": "Money Utkarsh",
+    "contact_email": "money.u@test.in",
+    "contact_phone": "+91 88990 01122",
+    "employer": "Cognizant",
+    "job_title": "Backend Developer",
+    "expertise": ["Node.js", "SQL", "AWS"],
+    "city": "Noida",
+    "country_code": "IN",
+    "linkedin_url": "https://www.linkedin.com/in/moneyutkarsh/"
+  },
+  {
+    "full_name": "Sowmya BJ",
+    "contact_email": "sowmya.bj@test.in",
+    "employer": "Accenture",
+    "expertise": ["React", "JavaScript", "TypeScript"],
+    "city": "Bengaluru",
+    "country_code": "IN",
+    "linkedin_url": "https://www.linkedin.com/in/sowmya-bj-417b45151/"
+  }
+]

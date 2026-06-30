@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Chitranshu Ajmera",
+    "login": "chitranshuajmera0000",
+    "email": "chitranshu@example.in",
+    "company": "@Infosys",
+    "bio": "Backend engineer, ML enthusiast",
+    "location": "Bengaluru, India",
+    "html_url": "https://github.com/chitranshuajmera0000/",
+    "blog": "https://chitranshu-portfolio.vercel.app"
+  },
+  {
+    "name": "Anurag Vivek",
+    "login": "ANURAGVIVEK0919",
+    "company": "Wipro",
+    "location": "Mumbai, India",
+    "html_url": "https://github.com/ANURAGVIVEK0919"
+  },
+  {
+    "name": "Rahul Blute",
+    "login": "Blute122",
+    "company": "@Amazon",
+    "location": "Chennai, India",
+    "html_url": "https://github.com/Blute122"
+  }
+]
